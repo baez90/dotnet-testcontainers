@@ -13,7 +13,7 @@ namespace DotNet.Testcontainers.Containers.Modules.Databases
     }
 
     // TODO: The hostname won't work on Azure, ip address won't work on Windows or macOS?
-    public override string ConnectionString => $"couchbase://{this.IpAddress}";
+    public override string ConnectionString => $"couchbase://{this.Hostname}";
 
     /// <summary>
     /// Creates a new bucket.

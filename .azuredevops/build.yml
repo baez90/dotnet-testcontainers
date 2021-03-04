@@ -15,6 +15,10 @@ jobs:
         inputs:
           version: ${{ parameters.dotNetCoreVersion }}
 
+      - powershell: |
+          sudo ifconfig
+        displayName: Debug Docker
+
       - powershell: dotnet tool install --tool-path ./cake-tools --version ${{ parameters.cakeVersion }} Cake.Tool
         displayName: Setup prerequisites
 
